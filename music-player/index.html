@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>MUSIC-PLAYER</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="music-container">
+			<div class="image-container">
+				<img src="../images/img1.jpg" alt="image1" id="cover" />
+			</div>
+			<h2 id="title">Paramore</h2>
+
+			<div class="progress-container">
+				<div class="progress-bar"></div>
+			</div>
+			<div class="navigation-container">
+				<button>
+					<i class="fa fa-step-backward" aria-hidden="true" id="prev"></i>
+				</button>
+
+				<button>
+					<i class="fa fa-play" id="play" aria-hidden="true"></i>
+				</button>
+				<button>
+					<i class="fa fa-step-forward" aria-hidden="true" id="next"></i>
+				</button>
+			</div>
+		</div>
+		<audio src="../songs/xb.mp3" id="audio"></audio>
+		<script src="app.js"></script>
+	</body>
+</html>

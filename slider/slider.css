@@ -1,0 +1,75 @@
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	color: #fff;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	flex-direction: column;
+	background: linear-gradient(
+		to bottom,
+		rgba(10, 10, 196, 0.8),
+		rgba(245, 33, 96, 0.7)
+	);
+}
+
+.gallery-container {
+	width: 300px;
+	height: 300px;
+	border: 5px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+	background-attachment: inherit;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	transform-style: preserve-3d;
+	perspective: 1000px;
+}
+.gallery-container .slides {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: darkblue;
+	position: absolute;
+	animation: animates 4s linear forwards;
+	border: 4px solid black;
+}
+
+@keyframes animates {
+	0% {
+		transform: translateX(200px);
+		opacity: 0.3;
+	}
+	50%,
+	90% {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+
+	80% {
+		transform: scale(0.8);
+	}
+	100% {
+		transform: translateX(-300px) scale(1) rotateY(105deg);
+		opacity: 1;
+	}
+}
+.fa {
+	font-size: 30px;
+	color: #000;
+}
+.icons ul li {
+	list-style: none;
+}
